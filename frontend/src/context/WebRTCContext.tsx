@@ -9,7 +9,7 @@ interface WebRTCContextValue {
   hangup: () => void
   handleSignal: (from_id: string, signal_type: string, payload: Record<string, unknown>) => Promise<void>
   remoteStream: MediaStream | null
-  audioRef: React.RefObject<HTMLAudioElement>
+  audioRef: React.RefObject<HTMLAudioElement | null>
 }
 
 const WebRTCContext = createContext<WebRTCContextValue>(null!)
